@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    height: 60px; /* Reduced header height */
+    padding: 0 40px;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 48px; /* Larger logo, adjust as needed */
+    width: auto;  /* Maintain aspect ratio */
+    max-height: 90%;
+    background: none;
+}
+
+.brand {
+    color: #222;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #000;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../assets/your-image-file') center/cover no-repeat;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 0;
+    line-height: 1.1;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.features span {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .features {
+        gap: 20px;
+        font-size: 1.1rem;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px 10px 10px;
+    }
+    nav {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solutions - Lixel Tech</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .solutions-header {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            font-size: 2.2rem;
+            padding: 18px 0 12px 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .solutions-gallery {
+            background: #e0e0e0;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 0;
+        }
+        .solutions-image {
+            width: 700px;
+            max-width: 90vw;
+            margin: 0 auto 30px auto;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+            border-radius: 8px;
+            background: #fff;
+        }
+        .carousel {
+            position: relative;
+            width: 700px;
+            max-width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-track {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            transition: opacity 0.4s;
+        }
+        .carousel-slide.active {
+            display: block;
+        }
+        .carousel-btn {
+            background: rgba(0,0,0,0.3);
+            border: none;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 0 18px;
+            border-radius: 50%;
+            z-index: 2;
+            transition: background 0.2s;
+        }
+        .carousel-btn:hover {
+            background: rgba(0,0,0,0.6);
+        }
+        @media (max-width: 900px) {
+            .solutions-image {
+                width: 98vw;
+            }
+            .solutions-header {
+                font-size: 1.3rem;
+            }
+            .carousel {
+                width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="height: 10vh; width: 100%;">
+        <img src="assets/logo.jpg" alt="LiXeL Logo" class="logo">
+        <nav style="margin-right: 100px;">
+            <a style="color: black; font-weight: bolder;" href="index.html">Home</a>
+            <a style="color: black; font-weight: bolder;" href="solutions.html">Our Solutions</a>
+            <a style="color: black; font-weight: bolder;" href="#">Contact Us</a>
+        </nav>
+    </header>
+    <div class="solutions-gallery">
+        <div class="carousel" style="width: 100%; height: 70vh; padding-top: 50px;">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track">
+                <div>
+                    <h1 class="solutions-header" style="position: absolute; border-top-left-radius: 15px; border-top-right-radius: 15px; width: 70vw; top: 10px; margin-right: 100px; margin-left: 100px; opacity: 70%;">SPECIAL PURPOSE MACHINES</h1>
+                    <img src="assets/sample-work.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 1" class="solutions-image carousel-slide active">
+                </div>
+                <div>
+                    <img src="assets/sample-work3.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 2" class="solutions-image carousel-slide">
+                <div>
+                    <img src="assets/sample-work2.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 3" class="solutions-image carousel-slide">
+                </div>
+                <div>
+                    <img src="assets/sample-work4.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 4" class="solutions-image carousel-slide">
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const titles = [
+            "NON DESTRUCTIVE QUALITY INSPECTION",
+            "EOL TESTING MACHINES",
+            "ROBOTIC APPLICATIONS",
+            "SPECIAL PURPOSE MACHINES"
+        ];
+        const slides = document.querySelectorAll('.carousel-slide');
+        const title = document.querySelector('.solutions-header');
+        function showSlide(idx) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === idx);
+                slide.style.display = i === idx ? 'block' : 'none';
+                title.textContent = titles[idx];
+            });
+        }
+        function moveSlide(dir) {
+            currentSlide = (currentSlide + dir + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
