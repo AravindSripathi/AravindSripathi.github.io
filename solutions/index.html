@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Solutions - Lixel Tech</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <style>
         .solutions-header {
             background: #111;
@@ -80,13 +80,13 @@
         }
     </style>
 </head>
-<body>
-    <header style="height: 10vh; width: 100%;">
-        <img src="assets/logo.jpg" alt="LiXeL Logo" class="logo">
-        <nav style="margin-right: 100px;">
-            <a style="color: black; font-weight: bolder;" href="index.html">Home</a>
-            <a style="color: black; font-weight: bolder;" href="solutions.html">Our Solutions</a>
-            <a style="color: black; font-weight: bolder;" href="#">Contact Us</a>
+<body style="background-color: #e0e0e0;">
+    <header style="height: 10vh; max-width: 100vw; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; box-sizing: border-box; overflow-x: hidden;">
+        <div class="snow" style="font-weight: bolder; color: #000; font-size: 40px;">LIXEL TECH</div>
+        <nav>
+            <a style="color: black; font-weight: bolder; margin-left: 20px;" href="../index.html">Home</a>
+            <a style="color: black; font-weight: bolder; margin-left: 20px;" href="index.html">Our Solutions</a>
+            <a style="color: black; font-weight: bolder; margin-left: 20px;" href="#contact-us">Contact Us</a>
         </nav>
     </header>
     <div class="solutions-gallery">
@@ -95,18 +95,27 @@
             <div class="carousel-track">
                 <div>
                     <h1 class="solutions-header" style="position: absolute; border-top-left-radius: 15px; border-top-right-radius: 15px; width: 70vw; top: 10px; margin-right: 100px; margin-left: 100px; opacity: 70%;">SPECIAL PURPOSE MACHINES</h1>
-                    <img src="assets/sample-work.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 1" class="solutions-image carousel-slide active">
+                    <img src="../assets/sample-work.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 1" class="solutions-image carousel-slide active">
                 </div>
                 <div>
-                    <img src="assets/sample-work3.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 2" class="solutions-image carousel-slide">
-                <div>
-                    <img src="assets/sample-work2.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 3" class="solutions-image carousel-slide">
+                    <img src="../assets/sample-work3.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 2" class="solutions-image carousel-slide">
                 </div>
                 <div>
-                    <img src="assets/sample-work4.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 4" class="solutions-image carousel-slide">
+                    <img src="../assets/sample-work2.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 3" class="solutions-image carousel-slide">
+                </div>
+                <div>
+                    <img src="../assets/sample-work4.jpg" style="width: 70vw; height: 70vh; margin-right: 100px; margin-left: 100px;" alt="Sample Work 4" class="solutions-image carousel-slide">
                 </div>
             </div>
             <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <div id="contact-us" style="background: #e0e0e0; color: #e0e0e0; padding: 20px 0; width: 100%; margin-top: 26vh;">
+        <div style="text-align: center;">
+            <h2 style="color: #000;">Contact Us</h2>
+            <p>Email: <a href="mailto:info@lixeltech.com" style="color: #000;">info@lixel.in</a></p>
+            <p style="color: #000;">Phone: +91 93848 19590/91/92</p>
+            <p style="color: #000;">Address: 18/6, Second floor, Raghupathy Nagar, 9th Street, Chennai - 600061</p>
         </div>
     </div>
     <script>
